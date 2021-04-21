@@ -3,4 +3,4 @@ project(c_alg C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(c_alg main.c)
+add_executable(c_alg search/main.c)
