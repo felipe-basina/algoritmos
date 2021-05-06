@@ -1,5 +1,20 @@
 #include <stdio.h>
 
+int factorial(int n) {
+    if (n <= 1) {
+        return 1;
+    }
+    return n * factorial(n - 1);
+}
+
+void doFactorial() {
+    int factors[] = {0, 2, 4, 5, 8, 10};
+    int total = (sizeof  factors) / (sizeof factors[0]);
+    for (int index = 0; index < total; index++) {
+        printf("%d! = %d\n", factors[index], factorial(factors[index]));
+    }
+}
+
 /**
  * Searches for key in the array with divide-conquer approach
  * So it means at each search the array is divided by half
@@ -8,6 +23,7 @@
  * @param l
  * @param h
  * @param key
+ * @param arr
  * @return l - the index of the found element in the array
  */
 int binarySearch(int l, int h, int key, int arr[]) {
@@ -45,6 +61,7 @@ void doABinarySearch() {
 }
 
 int main() {
-    doABinarySearch();
+    //doABinarySearch();
+    doFactorial();
     return 0;
 }
