@@ -10,7 +10,7 @@ import java.util.Queue;
  * Where a node visits each of its children before visiting
  * any of their children's children
  */
-public class PrintTransationalElements {
+public class PrintTraversalElements {
 
     public static void main(String[] args) {
         printValues(createNode());
