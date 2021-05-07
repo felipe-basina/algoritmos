@@ -1,5 +1,7 @@
 package sample.algorithm;
 
+import sample.algorithm.model.Node;
+
 public class TreeLength {
 
     public static void main(String[] args) {
@@ -25,16 +27,4 @@ public class TreeLength {
         return new Node(3, two, five);
     }
 
-}
-
-class Node {
-    public int data;
-    public Node left;
-    public Node right;
-
-    public Node(int data, Node l, Node r) {
-        this.data = data;
-        this.left = l;
-        this.right = r;
-    }
 }
