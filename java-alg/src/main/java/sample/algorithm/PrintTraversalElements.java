@@ -17,30 +17,29 @@ public class PrintTraversalElements {
     }
 
     private static void printValues(Node root) {
-        if (root == null) {
-            return;
-        }
-
+        Queue<Node> queue = new LinkedList<>();;
         visit(root);
-
-        Queue<Node> queue = new LinkedList<>();
-        queue.add(root);
+        addToQueue(root, queue);
 
         while (!queue.isEmpty()) {
             Node node = queue.remove();
-            if (node.left != null) {
-                visit(node.left);
-                queue.add(node.left);
-            }
-            if (node.right != null) {
-                visit(node.right);
-                queue.add(node.right);
-            }
+            visit(node.left);
+            addToQueue(node.left, queue);
+            visit(node.right);
+            addToQueue(node.right, queue);
         }
     }
 
     private static void visit(Node node) {
-        System.out.printf("%d ", node.data);
+        if (node != null) {
+            System.out.printf("%d ", node.data);
+        }
+    }
+
+    private static void addToQueue(Node node, Queue<Node> queue) {
+        if (node != null) {
+            queue.add(node);
+        }
     }
 
 /**
