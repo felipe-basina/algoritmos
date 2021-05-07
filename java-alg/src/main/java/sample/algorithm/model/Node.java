@@ -10,4 +10,13 @@ public class Node {
         this.left = l;
         this.right = r;
     }
+
+    @Override
+    public String toString() {
+        return "Node{" +
+                "data=" + data +
+                ", left=" + left +
+                ", right=" + right +
+                '}';
+    }
 }
