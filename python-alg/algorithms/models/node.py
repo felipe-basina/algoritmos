@@ -4,6 +4,9 @@ class Node:
         self.data = data
         self.next = None  # References to another node
 
+    def __str__(self):
+        return "[data={}:next={}] ".format(self.data, self.next)
+
 
 class LinkedList:
 
