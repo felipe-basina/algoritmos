@@ -2,6 +2,8 @@
 # Created by https://www.toptal.com/developers/gitignore/api/intellij+all,intellij+iml,intellij,python,c,c++,java,clojure,go,kotlin
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij+all,intellij+iml,intellij,python,c,c++,java,clojure,go,kotlin
 
+.idea
+
 ### C ###
 # Prerequisites
 *.d
