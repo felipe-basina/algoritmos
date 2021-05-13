@@ -4,6 +4,18 @@ Anagram is a word which has the same letters as another word
 """
 
 
+def update_total_letters(letter, dict_letters, amount_to_update):
+    if letter not in dict_letters:
+        dict_letters[letter] = amount_to_update
+    else:
+        if dict_letters[letter] + amount_to_update == 0:
+            del dict_letters[letter]
+        else:
+            dict_letters[letter] = dict_letters[letter] + amount_to_update
+
+    return dict_letters
+
+
 def check_anagram(s1, s2):
     if len(s1) != len(s2):
         return False
@@ -14,21 +26,8 @@ def check_anagram(s1, s2):
         letter_1 = s1[index]
         letter_2 = s2[index]
 
-        if letter_1 not in dict_letters:
-            dict_letters[letter_1] = 1
-        else:
-            if dict_letters[letter_1] + 1 == 0:
-                del dict_letters[letter_1]
-            else:
-                dict_letters[letter_1] = dict_letters[letter_1] + 1
-
-        if letter_2 not in dict_letters:
-            dict_letters[letter_2] = -1
-        else:
-            if dict_letters[letter_2] - 1 == 0:
-                del dict_letters[letter_2]
-            else:
-                dict_letters[letter_2] = dict_letters[letter_2] - 1
+        dict_letters = update_total_letters(letter_1, dict_letters, 1)
+        dict_letters = update_total_letters(letter_2, dict_letters, -1)
 
     return len(dict_letters) == 0
 
