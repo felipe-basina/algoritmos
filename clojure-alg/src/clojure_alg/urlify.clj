@@ -25,5 +25,5 @@
                    true
                    (rest string))))))))
 
-(println (urlify "Mr John Smith     ")) ; 'Mr%20John%20Smith'
-(println (urlify "  Minä    kirjoin    Clojure      ")) ; 'Minä%20kirjoin%20Clojure'
+(println (urlify "Mr John Smith     "))                     ; 'Mr%20John%20Smith'
+(println (urlify "  Minä    kirjoin    Clojure      "))     ; 'Minä%20kirjoin%20Clojure'
