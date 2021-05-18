@@ -1,6 +1,9 @@
 (ns clojure-alg.urlify
   (:require [clojure.string :as str]))
 
+;;;
+;;; Replace all spaces in a string with '%20'.
+;;;
 (defn split-string [string]
   (str/split string #""))
 
