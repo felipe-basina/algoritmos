@@ -26,16 +26,9 @@ def merge_lists(elements1, elements2):
                 mergeArr.append(v1)
                 index1 += 1
                 v1 = None
-            elif v1 > v2:
-                mergeArr.append(v2)
-                index2 += 1
-                v2 = None
             else:
-                mergeArr.append(v1)
                 mergeArr.append(v2)
-                index1 += 1
                 index2 += 1
-                v1 = None
                 v2 = None
         elif v1 is not None:
             mergeArr.append(v1)
@@ -53,4 +46,4 @@ def merge_lists(elements1, elements2):
 
 if __name__ == '__main__':
     print(merge_lists([1, 3, 7], [1, 2]))
-    print(merge_lists([1, 10, 12, 15, 32], [2, 4, 9, 11, 14, 17, 31, 32]))
+    print(merge_lists([1, 10, 12, 15, 32], [2, 3, 4, 9, 11, 14, 17, 31, 32]))
