@@ -10,7 +10,27 @@ Example:
 1 is the HEAD of the list
 '''
 
+"""
+This function avoids the exception:
+'RecursionError: maximum recursion depth exceeded while calling a Python object'
+"""
+def getElementsInteractive(node, arr):
+    if node is None:
+        return []
 
+    ref_node = node
+    while ref_node:
+        arr.append(ref_node.data)
+        ref_node = ref_node.next
+
+    return arr
+
+
+"""
+This function works for a LinkedList not too big
+and whether it is, then it is possible to occur following exception:
+'RecursionError: maximum recursion depth exceeded while calling a Python object'
+"""
 def get_elements(node, nodes):
     if node.next is None:
         nodes.append(node)
